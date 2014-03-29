@@ -1,0 +1,12 @@
+{
+  "name" : "NxTransport",
+  "version" : "0.1",
+  "require" : {
+    "swiftmailer/swiftmailer" : "=v5.1.0",
+    "php" : ">=5.5.0"
+  },
+  "repositories" : [ {
+    "type" : "composer",
+    "url" : "https://packagist.org/"
+  } ]
+}
