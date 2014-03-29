@@ -33,7 +33,8 @@ class BasicHandler
     /**
      * Parse a reply and return
      *
-     * @param unknown $line
+     * @param Connection $line
+     * @return string
      * @throws Exception
      */
     protected function parseLine(Connection $connection)
@@ -42,7 +43,7 @@ class BasicHandler
         $this->response .= $line;
         // Extract Status Code
         $status = substr($line, 0, 3);
-        if (!is_numeric($status)) {
+        if (! is_numeric($status)) {
             throw new Exception('Invalid Reply, line not starting with a 3 char digit status code');
         }
         if ($this->statusCode == 0) {
